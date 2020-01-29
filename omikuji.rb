@@ -1,3 +1,17 @@
-omikuji = ["大吉", "中吉", "小吉", "大凶"]
+class User
+  attr_accessor :name
 
-puts omikuji.sample
+  def initialize(**params)
+    @name = params[:name]
+  end
+end
+
+user1 = User.new(name: "saitou")
+user2 = User.new(name: "taira")
+user3 = User.new(name: "yamada")
+
+users = [user1, user2, user3]
+
+users.each do |user|
+  puts user.name
+end
