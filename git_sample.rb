@@ -8,9 +8,25 @@ class User
 
   def introduce
     if adult?
-      "初めまして、私の名前は#{@name}です"
+      <<~EOS
+
+      初めまして、私の名前は#{@name}です
+
+      #{@age}歳です
+
+      よろしくお願いします
+      EOS
     else
-      "僕は#{@name}だよ"
+      <<~EOS
+      僕は#{@name}だよ!!
+
+      #{@age}歳だよ
+
+      よろしくね！！
+
+      EOS
+
+
     end
   end
 
